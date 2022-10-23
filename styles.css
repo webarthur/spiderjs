@@ -1,0 +1,35 @@
+html, body {
+  height: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#stage {
+  position: relative;
+  background: #ddd;
+  height: 100%;
+}
+
+.char {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  /* background: red; */
+}
+
+.platform {
+  background: gray;
+  position: absolute;
+}
+
+#p1 {
+  width: 30px;
+  z-index: 1000;
+}
+#p1 img {
+  width: 100px;
+  position: relative;
+  left: -23px;
+}

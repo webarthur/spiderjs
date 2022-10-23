@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="js/vue-2.5.13.min.js"></script>
+  <script defer src="js/spider.js"></script>
+  <script defer src="js/Input.js"></script>
+  <script defer src="js/events.js"></script>
+</head>
+<body>
+
+  <div id="stage" :style="'width:'+stage.w+'px; height:'+stage.h+'px'">
+
+    <table>
+      <tr>
+        <td>x1: {{p1.x}}, y2: {{p1.y}}</td>
+      </tr>
+      <tr>
+        <td>x2: {{p1.x + p1.w}}, y2: {{p1.y + p1.h}}</td>
+      </tr>
+      <tr>
+        <td>ani: {{p1.aniSet}}</td>
+      </tr>
+      <tr>
+        <td>gravity: {{p1.gravity}}</td>
+      </tr>
+    </table>
+
+    <div id="p1" class="char" :style="'top:'+p1.y+'px; left:'+p1.x+'px; width:'+p1.w+'px; height:'+p1.h+'px; transform: scaleX(' + p1.flip + ')'">
+      <img :src="`assets/${p1.img}.png`" alt="">
+    </div>
+
+    <div v-for="platform in platforms" class="platform" :style="`top: ${platform.y}px; left: ${platform.x}px; width: ${platform.w}px; height: ${platform.h}px`">
+
+    </div>
+
+  </div>
+
+</body>
+</html>
